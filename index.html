@@ -13,13 +13,23 @@
     <!-- <link rel="stylesheet" type="text/css" href=""> -->
 </head>
 <body>
+    <div id="header">
+        <h1>GifTastic</h1>
+    </div>
     <div id= "button"></div>
+    <form id="topic-form">
+        <label for="topic-input">Add a Topic</label><br>
+        <input type="text" id="topic-input"><br>
+  
+        <!-- Button triggers new movie to be added -->
+        <input id="add-button" type="submit" value="Add">
+    </form>
     <div id= "gifs"></div>
 
     <!-- jQuery  -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    
     <!-- Script  -->
-    <script type="text/javascript" src="api.js"></script> 
+    <script type="text/javascript" src="assets/javascript/api.js"></script> 
 </body>
 </html>
