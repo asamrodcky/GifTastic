@@ -1,0 +1,13 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    background-color: black;
+    color:white;
+}
+
+#header{
+    text-align: center;
+    font-size: 34px;
+}

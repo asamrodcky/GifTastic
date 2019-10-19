@@ -5,7 +5,7 @@ function renderButtons(){
     for(i = 0; i < topics.length; i++){
         var buttons = $("<button>").text(topics[i])
         buttons.attr("id", topics[i])
-        buttons.addClass("gifs")
+        buttons.addClass("topics")
         $("#button").append(buttons)
     }
 }
@@ -27,6 +27,8 @@ function displayGif(){
 
         for (var i = 0; i < results.length; i++) {
             var gifDiv = $("<div>");
+            console.log(gifDiv);
+            gifDiv.attr("id","gif");
 
             var rating = results[i].rating;
 
@@ -34,6 +36,7 @@ function displayGif(){
 
             var gifImage = $("<img>");
             gifImage.attr("src", results[i].images.fixed_height.url);
+            gifImage.attr("data-state","animate")
 
             gifDiv.prepend(p);
             gifDiv.prepend(gifImage);
