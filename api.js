@@ -60,3 +60,12 @@ $("#add-button").on("click", function(event) {
 
 renderButtons();
 $(document).on("click", ".gifs", displayGif);
+
+// Psuedocode:
+
+// have the for loop in the displayGif function set each img
+// to have data-status' as animate/static and different urls for each
+// so that I can toggle each gif to pause/play on click.
+// have the loop also set ids/data-names for the divs in for the gifs/ratings
+// so that I can properly structure them with CSS.
+// after that would be able to much easier structure the entire page.
