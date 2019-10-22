@@ -23,7 +23,7 @@ function displayGif(){
 
         for (var i = 0; i < results.length; i++) {
             var gifDiv = $("<div>");
-            gifDiv.attr("id","gif");
+            gifDiv.attr("id","pic");
 
             var rating = results[i].rating;
 
@@ -56,15 +56,25 @@ $("#add-button").on("click", function(event) {
     $("#topic-input").val("")
 });
 
-$(".gif").on("click", function(){
+$(document).on("click", ".gif", function(){
+    console.log("HI!")
+    // var toggle = {"still":"animate", "animate":"still"}
+    // $(this).attr("src", $(this).attr("data-"+toggle[state]));
+    // $(this).attr("data-state", toggle[state]);
+
     var state = $(this).attr("data-state")
     console.log(state)
-    if(state == "still"){
-        console.log("true")
-    }
-    // else{
+    if (state === "still"){
+        var imageURL = $(this).attr("data-animate")
+        $(this).attr("src", imageURL)
+        $(this).attr("data-state", "animate")
+      }
 
-    // }
+      else{
+        var imageURL = $(this).attr("data-still")
+        $(this).attr("src", imageURL)
+        $(this).attr("data-state", "still ")
+      }
 })
 
 renderButtons();

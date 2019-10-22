@@ -10,5 +10,14 @@ body{
 #header{
     text-align: center;
     font-size: 34px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+.topics{
+    margin-right:20px;
+    margin-bottom:20px;
+}
+
+#pic{
+    float: left;
+}
